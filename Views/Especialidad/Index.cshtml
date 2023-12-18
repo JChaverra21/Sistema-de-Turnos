@@ -1,0 +1,31 @@
+@model IEnumerable<Turno.Models.Especialidad>
+
+<p>
+    <a asp-action="Create" class="btn-floating btn-large orange"><i class="material-icons">star_rate</i></a>
+</p>
+
+<table class="responsive-table highlight z-depth-3 orange lighten-4">
+    <thead class="orange lighten-1 white-text">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th style="width: 80px;"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @*Aqui colocaremos, mas adelante, el codigo para traer los registros de la base de datos*@
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descripcion)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.IdEspecialidad"><i class="material-icons">edit</i></a>
+                    <a asp-action="Delete" asp-route-id="@item.IdEspecialidad"><i class="material-icons red-text">delete</i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

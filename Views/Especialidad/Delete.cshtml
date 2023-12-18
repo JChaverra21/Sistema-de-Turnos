@@ -1,0 +1,40 @@
+@model Turno.Models.Especialidad
+
+<h5> ¿Está usted seguro de eliminar la siguiente Especialidad? </h5>
+
+<div class="row">
+    <div class="col s12 m6">
+        <div class="card hoverable orange lighten-1">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    <h5><b>@Html.DisplayFor(model => model.Descripcion)
+                </span>
+            </div>
+            <div class="card-action orange lighten-4">
+                <form asp-action="Delete">
+                    <input type="hidden" asp-action="IdEspecialidad" />
+                    <input type="submit" value="Eliminar" class="waves-effect waves-light btn-small orange lighten-2" />
+                    <a asp-action="Index" class="right">Volver</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* <div>
+    <dl>
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+    </dl>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdEspecialidad" />
+        <input type="submit" value="Eliminar" />
+    </form>
+    <div>
+        <a asp-action="Index">Volver</a>
+    </div>
+</div> *@

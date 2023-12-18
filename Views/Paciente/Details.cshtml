@@ -1,0 +1,79 @@
+@model Turno.Models.Paciente
+
+<h4>Paciente</h4>
+
+<div class="row">
+    <div class="col s12 m6">
+        <div class="card hoverable green accent-4">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    <h5><b>@Html.DisplayFor(model => model.Nombre), @Html.DisplayFor(model =>
+                            model.Apellido)</b></h5>
+                </span>
+                <dt>
+                    <h6>@Html.DisplayNameFor(model => model.Direccion) : @Html.DisplayNameFor(model =>
+                        model.Telefono)</h6>
+                </dt>
+                <hr />
+                <dt>
+                    <h6>@Html.DisplayNameFor(model => model.Telefono) : @Html.DisplayFor(model =>
+                        model.Telefono)</h6>
+                </dt>
+                <hr />
+                <dt>
+                    <h6>@Html.DisplayNameFor(model => model.Email) : @Html.DisplayFor(model => model.Email)</h6>
+                </dt>
+            </div>
+            <div class="card-action green darken-4">
+                <form asp-action="Delete">
+                    <input type="hidden" asp-action="IdPaciente" />
+                    <a asp-action="Edit" asp-route-id="@Model.IdPaciente">Editar</a>
+                    <a asp-action="Index" class="right">Volver</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* <div>
+    <dl>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellido)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Apellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Telefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdPaciente">Editar</a> |
+    <a asp-action="Index">Volver</a>
+</div> *@
